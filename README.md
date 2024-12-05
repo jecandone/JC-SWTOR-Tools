@@ -1,6 +1,6 @@
 The tools here allow for the import of armor into Blender, as well as adding a character creator.
 
-<h1>**Enabling the Plugin**##</h1>
+<h1>**Enabling the Plugin**</h1>
 
 Make sure to point to the path of your extracted SWTOR assets to the "resources" folder.  
 
