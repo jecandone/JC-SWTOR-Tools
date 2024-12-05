@@ -1,10 +1,10 @@
 The tools here allow for the import of armor into Blender, as well as adding a character creator.
 
-##**Enabling the Plugin**
+##**Enabling the Plugin**##
 
 Make sure to point to the path of your extracted SWTOR assets to the "resources" folder.  
 
-##**Armor Import**
+##**Armor Import**##
 
 Allows the import of armor via the ModelID and ColorSchemeID values.  To find this, search for any armor on https://swtor.jedipedia.net/en, for example "Havoc Squad Greaves".  Take a look under name under the appearance section, "ipp.mtx.season7.havoc_squad.legs".
 
