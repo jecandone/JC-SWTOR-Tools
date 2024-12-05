@@ -25,3 +25,21 @@ Copy the value from "appAppearanceSlotModelID" to the appropriate "ModelID" part
 Repeat this for any armor pieces to import, or leave them blank, and click "Import Armor" and the armor will import:
 
 ![image](https://github.com/user-attachments/assets/debbc5ab-bc90-48e2-b46f-f6fdb066478a)
+
+**<h3>Armor Import (FQN)</h3>**
+
+Allows for armor import by looking up FQN values.  Some armor pieces have part of their name in the FQN value (ie the havoc squad armor, shae vizla armor, satele shan armor, etc), but others do not.  If the armor you're searching for doesn't appear likely the FQN name and the in-game name are different, and the FQN name would need to be looked up manually at Jedipedia).  If after a game update, an armor does not appear (since the file holding all the info for the FQN names and related values needs to be updated manually), then the other Armor Import section can be used by looking up the ModelID and the ColorSCheme.
+
+**<h3>Save Texture Files</h3>**
+
+Takes any textures inside the scene, saves them to the folder specified, and updates the Blender file to reference the textures in the newly saved location.  Useful for saving textures file in a different folder when using the armor import function, but can also be used if for any other purposes, such as if a .gr2 file was manually imported and the process materials function from the ZG SWTOR Tools.
+
+**<h3>Dye Import</h3>**
+
+Ability to search for any dye file in the game, and import it into the active object & material as node groups.  Using either of the import armor functions, the primary and secondary color scheme values get applied as node groups.  One can use this to import a dye color, then just change the node group name on the node groups that are connected to the armor shader to the name of the dye that was just imported to change the colors of the armor.  Like the FQN armor import function, the dye names and associated color scheme values need to be manually updated if new dyes get added to the game.  
+
+**<h3>Node Groups to SWTOR Garment Shader</h3>**
+
+Since dyes get applied as node groups, this function adds node groups to an active object that has a ZG SWTOR Garment Shader.  Intended to be able to quickly apply different dye colors.  
+
+**<h2>Source Files and Updating References Files</h2>**
