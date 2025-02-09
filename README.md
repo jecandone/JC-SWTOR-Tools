@@ -65,6 +65,24 @@ Issues/Notes - for certain armor pieces (for example, many chest armor pieces th
 
 Import NPCs.  This allows import of regular (non-creature) as well as creature (both humanoid and non-humanoid) NPCs.  To use this feature:
 
-To to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC.  For example Nadia Grell, Alliance version of the character.  
+To to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC, and select the NPC you want to import.  For example Nadia Grell, Alliance version of the character.  Look under the appearance section, and the FQN, and copy this.  In this example, "npp.daily_area.ossus.world.republic.nadia_grell".    
+
+![image](https://github.com/user-attachments/assets/102f4fd7-84f6-4701-a03c-f18b99b466ae)
+
+Go the the Jedipedia File Reader, to the node section, search for the node, and open it.  
+
+![image](https://github.com/user-attachments/assets/358c9171-5a00-4ea6-9f77-0ab534de15d2)
+
+Once this is selected, select all (control-a), and copy it (control-c). 
+
+Go to Blender, and under the "NPC Import" section, click the "NPC - Load Settings" button.  This opens up a text editor window.  Paste the text that was copied from the node from Jedipedia, then press the "NPC - Store Settings", and the text editor window pop up will go away.
+
+![image](https://github.com/user-attachments/assets/7e0e6c32-e554-4a11-b62f-952a29756ecb)
+
+Once the settings are stored, the NPC can be previewed (has the same Preview Pose option as the Character Creation section), or Imported.  The "NPC - Settings Stored" button can be clicked to change or reenter the NPC data if desired.  This section has the same options as the character creation for Rename/Group Objects, Parent to Normal Skeleton, Parent to JC Skeleton/Empty, and Create Folder Structure.  Unique to the NPC Import is the "Special Eye Material" and the "2nd Material Slot - Non-Skin Material" options.  Some NPCs on Jedipedia (for example, one of the pre-KOTFE Lana NPCs), have special eye materials, and they don't appear in the Appearence FQN node.  To get around this, one would need to click on the "Special Eye Material" checkbox, then go back to the database page for Jedipedia of the NPC (not the node in the reader), and look under head, and get the eye material name.  One would then need to put that name into the input box for the special eye material.  
+
+![image](https://github.com/user-attachments/assets/c2b31a5f-56b8-40bd-a2d4-5360743d9653)
+
+Some NPCs (for example Kira Carsen Post KOTFE, Lana pre-KOTFE) have armor leg pieces that import with a second material slot, and this second material slot will normally be processed as a skin material, even though in the actual NPC this is an armor material, not a skin shader.  To fix this, select the "2nd Material Slot - Non-Skin Material" option, and the second material slot in the leg will be correctly set as an armor material.  If one is unsure if an NPC has this or not, this can be tried out in the preview for NPCs to determine which of these two options need to be selected.
 
 **<h2>Source Files and Updating References Files</h2>**
