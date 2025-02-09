@@ -42,4 +42,23 @@ Ability to search for any dye file in the game, and import it into the active ob
 
 Since dyes get applied as node groups, this function adds node groups to an active object that has a ZG SWTOR Garment Shader.  Intended to be able to quickly apply different dye colors.  
 
+**<h3>Character Creation</h3>**
+
+Import character based on input settings.  Contains the following features:
+
+- Rename/Group Objects: Rename all objects and materials, and put them into a seperate group, based on the input of the "Character Name" field
+- Normal Skeleton Import: Import & parent objects to the normal/default skeleton
+- JC Skeleton/Empty: Import & parent object to a modified version of the normal skeleton - deleted VFX bones, parented the skeleton to a plain axis empty, and added two single arrow empties parented to the plain axis empty.
+- Create Folder Structure: Saves materials to selected folder directory
+- Character Preview: Press the "Preview" button to preview the current character.  Character by default is in one of the character creation poses, uncheck the "Preview Pose" to not use this pose and use an unposed character in the preview
+- Existing Character - Import Settings: Import an existing character created with this plugin - opens up a text editor window to paste in settings.
+- Export Character JSON: Creates paths.json, skeleton.json, preset.json, creates folder structure, and saves material files to folders - for using with ZG SWTOR Tool Character Importer.
+- Randomize: Randomizes the various input options (excluding the armor options).  Each input option has a lock button to exclude it from the randomizing function.
+- Keep Head (Skin) Model: Default is having this checked - having this option unchecked does not import the head (skin) objects.
+- TORC or Game corruption values: Ssee "Global Settings" tab - TORC and the ingame files calculate eye color values for corruption levels differently, one can pick either option to use.
+
+Other features/items worth mentioning - there is a "unify to Chest Colors" option in the "Dye Color: Overall" field, to be able to use the equivelent of the in game feature for unifying to chest piece.  All imports for hair with either of the skeleton parenting option enables auto fixex the vertex groups and sets them all to the "head" vertex group. 
+
+Issues/Notes - for certain armor pieces (for example, many chest armor pieces that have a hood), this plugin will import all attachments to armor pieces, and sometimes the game only uses part of the attachments for an armor set.  One can just delete the excess attachments after import to fix this.  Similar issue for "hair" objects (ie hair, twilek headbands) and "facehair" objects (facehair, jewelery), this will import all attachments for these, and the game only uses part of the attachents for them.  One can delete the excess attachment pieces to get the "Hair" or "facehair" to the proper ingame version of it.
+
 **<h2>Source Files and Updating References Files</h2>**
