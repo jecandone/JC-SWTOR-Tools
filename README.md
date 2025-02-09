@@ -61,4 +61,10 @@ Other features/items worth mentioning - there is a "unify to Chest Colors" optio
 
 Issues/Notes - for certain armor pieces (for example, many chest armor pieces that have a hood), this plugin will import all attachments to armor pieces, and sometimes the game only uses part of the attachments for an armor set.  One can just delete the excess attachments after import to fix this.  Similar issue for "hair" objects (ie hair, twilek headbands) and "facehair" objects (facehair, jewelery), this will import all attachments for these, and the game only uses part of the attachents for them.  One can delete the excess attachment pieces to get the "Hair" or "facehair" to the proper ingame version of it.
 
+**<h3>NPC Import</h3>**
+
+Import NPCs.  This allows import of regular (non-creature) as well as creature (both humanoid and non-humanoid) NPCs.  To use this feature:
+
+To to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC.  For example Nadia Grell, Alliance version of the character.  
+
 **<h2>Source Files and Updating References Files</h2>**
