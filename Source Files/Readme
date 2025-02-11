@@ -205,6 +205,8 @@ Run the file, it creates a new JSON file called "haircolor.json", copy this file
 Head Races
 ------------------------------------------------------------------------------------------------------
 
+Use Tools in Zip File: : Get_HeadRaceValues.zip
+
 1) Run 1_GetRaceValues.py
 
 This will prompt for the location of the head (face) race values, enter in the location of the face index.xml file (ie where "\resources\art\dynamic\face" is located)
