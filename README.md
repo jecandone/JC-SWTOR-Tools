@@ -87,7 +87,11 @@ Go to Blender, and under the "NPC Import" section, click the "NPC - Load Setting
 
 ![image](https://github.com/user-attachments/assets/7e0e6c32-e554-4a11-b62f-952a29756ecb)
 
-Once the settings are stored, the NPC can be previewed (has the same Preview Pose option as the Character Creation section), or Imported.  The "NPC - Settings Stored" button can be clicked to change or reenter the NPC data if desired.  This section has the same options as the character creation for Rename/Group Objects, Parent to Normal Skeleton, Parent to JC Skeleton/Empty, and Create Folder Structure.  Unique to the NPC Import is the "Special Eye Material" and the "2nd Material Slot - Non-Skin Material" options.  Some NPCs on Jedipedia (for example, one of the pre-KOTFE Lana NPCs), have special eye materials, and they don't appear in the Appearence FQN node.  To get around this, one would need to click on the "Special Eye Material" checkbox, then go back to the database page for Jedipedia of the NPC (not the node in the reader), and look under head, and get the eye material name.  One would then need to put that name into the input box for the special eye material.  
+Once the settings are stored, the NPC can be previewed (has the same Preview Pose option as the Character Creation section), or Imported.  The "NPC - Settings Stored" button can be clicked to change or reenter the NPC data if desired.  This section has the same options as the character creation for Rename/Group Objects, Parent to Normal Skeleton, Parent to JC Skeleton/Empty, and Create Folder Structure.  
+
+Unique to the NPC Import is the "Special Eye Material" and the "2nd Material Slot - Non-Skin Material" options.  
+
+Some NPCs on Jedipedia (for example, one of the pre-KOTFE Lana NPCs), have special eye materials, and they don't appear in the Appearence FQN node.  To get around this, one would need to click on the "Special Eye Material" checkbox, then go back to the database page for Jedipedia of the NPC (not the node in the reader), and look under head, and get the eye material name.  One would then need to put that name into the input box for the special eye material.  
 
 ![image](https://github.com/user-attachments/assets/c2b31a5f-56b8-40bd-a2d4-5360743d9653)
 
