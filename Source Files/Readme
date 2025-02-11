@@ -1,8 +1,12 @@
 ------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
 Character Appearance Option (PCS) Files
 ------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
 
-0) Pre-Reqs:
+Pre-Reqs:
 
 Chrome Driver - need a version of chrome driver to be able to run the python file (https://googlechromelabs.github.io/chrome-for-testing/) - make sure to download the "chromedriver"
 
@@ -12,6 +16,10 @@ Author Note: I ran this in Windows Powershell (ie python [python file]) - the sy
 	pip install selenium
 	pip install pyautogui
 	pip install pyperclip
+
+------------------------------------------------------------------------------------------------------
+Getting PCS Character Data
+------------------------------------------------------------------------------------------------------
 
 1) Run "1_PCSProcess.py"
 
@@ -184,3 +192,186 @@ Save the JSON file to the folder that has "1_PropIDReplace.py".  Note, it's impo
 2) Run '1_PropIDReplace.py'
 
 Run the file, it creates a new JSON file called "haircolor.json", copy this file to the "char\haircolor" folder of the plugin directory
+
+STEP #1
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Getting Armor Data
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------
+Step 1 - Getting IPP Data
+------------------------------------------------------------------------------------------------------
+
+Pre-Reqs:
+
+Chrome Driver - need a version of chrome driver to be able to run the python file (https://googlechromelabs.github.io/chrome-for-testing/) - make sure to download the "chromedriver"
+
+CSV File of Nodes - needs a CSV file to tell the script what nodes to process - trying to process the entire "ipp" node at a time can often lead to crashing, so breaking this up (ie into each node within the ipp node) does not lead to the same issues and is recommended.
+
+Property ID Translation File - needs a .json file to process the "untranslated" property ID fields - will replace any string it finds on the left hand side of the file with the translated name on the right hand side file.  To get updated translations:
+
+	1) Go to Jedipedia File Reader, go to the node tab.
+	2) Open up the developer console (ie F12 on chrome), and run the following command:
+
+	copy(Object.entries(GOM.fields).map(t => t.join('\t')).join('\n'))
+
+	3) This creates a JSON file that is copied to the clipboard - paste this into a new file, and save it as a .json file
+
+
+Author Note: I ran this in Windows Powershell (ie python [python file]) - the system needs the below to run, if they're not installed in your system, they can be installed via typing in the commands below:
+
+	pip install psutil
+	pip install selenium
+	pip install pyautogui
+	pip install pyperclip
+
+1) 1_ProcessingArmorValues.py
+
+Input: Chrome Directory ('chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"')
+Input: .TOR file directory ('tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]')
+Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Jeff\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
+Input: CSV file of nodes ('CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')  # CSV file path')
+Input: Property ID Translation File ('MAPPING_FILE = r"GOM.fields.json"  # Path to your mapping file')
+
+Downloads all untranslated node data for all files in the "ipp" node section to "raw" folder
+
+NOTE: This function mimics saving files by hand in one part of it, if one clicks around or navigates to other web pages while this is running, the function will not work (it will fail to save the JSON files)
+
+2) 2_json-field-replacer.py
+
+Input: Name Translation File ('fields_mapping = load_json_file('GOM.fields.json')')
+
+Replaces the property IDs from the downloaded JSON files with translated names, created an output in the "processed" folder
+
+3) 3_ConvertToCSV.py
+
+Creates "ippArmorValues.csv" file - contains a CSV with the following columns:
+
+Column #1: Armor FQN Name
+Column #2: Display Name
+Column #3: Slot (ie leg, hand, etc)
+Column #4: Model ID
+Column #5: Color Scheme ID
+Column #6: Material IID
+
+4) Place the newly created CSV file ("ippArmorValues.csv") into the "ArmorIPP" folder of the plugin.
+
+
+OPTIONAL: All inputs need to be updated for your file path, but once done, can run the single script "RunAll_GettingIPP.py" to run all three files in order.  
+
+------------------------------------------------------------------------------------------------------
+Step 2 - Getting ITM Data
+------------------------------------------------------------------------------------------------------
+
+Pre-Reqs:
+
+Chrome Driver - need a version of chrome driver to be able to run the python file (https://googlechromelabs.github.io/chrome-for-testing/) - make sure to download the "chromedriver"
+
+CSV File of Nodes - needs a CSV file to tell the script what nodes to process - trying to process the entire "ipp" node at a time can often lead to crashing, so breaking this up (ie into each node within the ipp node) does not lead to the same issues and is recommended.
+
+Property ID Translation File - needs a .json file to process the "untranslated" property ID fields - will replace any string it finds on the left hand side of the file with the translated name on the right hand side file.  To get updated translations:
+
+	1) Go to Jedipedia File Reader, go to the node tab.
+	2) Open up the developer console (ie F12 on chrome), and run the following command:
+
+	copy(Object.entries(GOM.fields).map(t => t.join('\t')).join('\n'))
+
+	3) This creates a JSON file that is copied to the clipboard - paste this into a new file, and save it as a .json file
+
+ITM ID Translation File - needs a .json file to process the "untranslated" ITM ID field - will replace any string it finds on the left hand side of the file with the translated name (ie in-game name) on the right hand side of the file.  To get updated translations:
+
+	1) Go to Jedipedia File Reader, go to the node tab.
+	2) Open up the developer console (ie F12 on chrome), and run the following command:
+
+	copy(stb['str.itm']);
+
+	3) This creates a JSON file that is copied to the clipboard - paste this into a new file, and save it as a .json file 
+
+Author Note: I ran this in Windows Powershell (ie python [python file]) - the system needs the below to run, if they're not installed in your system, they can be installed via typing in the commands below:
+
+	pip install psutil
+	pip install selenium
+	pip install pyautogui
+	pip install pyperclip
+
+
+1) 1_ProcessingArmorValues.py
+
+Input: Chrome Directory ('chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"')
+Input: .TOR file directory ('tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]')
+Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Jeff\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
+Input: CSV file of nodes ('CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')  # CSV file path')
+Input: Property ID Translation File ('MAPPING_FILE = r"GOM.fields.json"  # Path to your mapping file')
+
+Downloads all untranslated node data for all files in the "itm" node section to "raw" folder
+
+NOTE: This function mimics saving files by hand in one part of it, if one clicks around or navigates to other web pages while this is running, the function will not work (it will fail to save the JSON files)
+
+2) 2_json-field-replacer.py
+
+Input: Name Translation File ('fields_mapping = load_json_file('GOM.fields.json')')
+
+Replaces the property IDs from the downloaded JSON files with translated names, created an output in the "processed" folder
+
+3) 3_ReplaceNames.py
+
+Input: ITM Translation File ('item_names_file = os.path.join(current_dir, "ITMNameValues.json")')
+
+Replaces the ITM IDs from the downloaded JSON files in the "processed" folder with the translate ITM names, and saves new file to the "Named" folder.
+
+
+4) 4_CreatingNameCSV.py
+
+Creates a file "ArmorNodes_Names.csv" - a CSV file with three columns:
+
+Column #1: Armor FQN Name
+Column #2: Slot (leg, chest, etc)
+Column #3: In-Game Name
+
+NOTE: All four of the .py file need any of their inputs updated, but instead of running each file individually, one can run the file "" to run all four of them in sequence.  
+
+------------------------------------------------------------------------------------------------------
+Step 3 - Combining ITM and IPP Data
+------------------------------------------------------------------------------------------------------
+
+Pre-Reqs
+
+Ensure that the "ippArmorValues.csv" file from the IPP process and the "ArmorNodes_Names.csv" file from the ITM process are inside the folder that "1_CreateNameFile.py" is in.
+
+1) 1_CreateNameFile.py
+
+Creates a new "ippArmorValues.csv" file called "ippArmorValues_en" - replaces Column #2 with the in-game names from the "ArmorNodes_Names.csv" files.  Note: If no matching in game name is found, it uses the FQN name inside of square brackets.
+
+One would be able to do this for other non-English languages to get the names to show up in Blender if they load the non-English version into the Jedipedia file reader, and run the ITM process.  More on how to place this in the plugin and what code would need to be modified in the step after next.
+
+2) 2_Sorting.py
+
+Sorts the CSV files based on column - the script will ask to type in the CSV file to sort (ie "ippArmorValues_en.csv"), and ask which column to sort by.  To sort by in-game names, use type in "1" (Column 0 is first column, Column 1 is 2nd column).  
+
+3) Place inside of Plugin Folder
+
+Take the "ippArmorValues_en_sorted.csv" file, place it inside the "ArmorIPP" folder of the plugin, and remove the "_sorted" part from the file name.
+
+4) OPTIONAL - Additional Languages
+
+If a non-English "ArmorNodes_Names.csv" is used, one would need to run Step 1 above, then change the file name from "ippArmorValues_en.csv" to say for Spanish "ippArmorValues_sp.csv" - the exact name for the non-English file does not matter, this will be changed in the code of the plugin.  Run the sorting function, then place the file inside of the "ArmorIPP" folder of the plugin, and removed the "_sorted" at the end of the file name.
+
+To add this to the code of the plugin, 
+
+	1) Go to the register function at the very end of the code (ie 'def register():'), and then go to the armor_language property (ie 'bpy.types.Scene.armor_language')
+
+	2) The plugin currently has "FQN" and "English", to add a language, add a new line to the items dictionary (ie the 'items=[' part).  There are three columns - the first column is the reference name in the code, the second column is what will display in Blender, and the third column is the description column (ie the text that appears when you hover the mouse over the choice)
+
+	For example, adding a French language, the code for the items dictionary would be
+
+            ('FQN', "FQN", "Display Armor Names as FQN"),
+            ('ENGLISH', "English", "Display Armor Names - English")  
+	    ('FRENCH', "French", "Afficher les noms d'armures - Français") 	 
+
+
+	3) go to the "get_armor_csv_path" function (ie 'def get_armor_csv_path(context):'), the function contains an example, a  commented out section for adding in a French langauge, one would do this for whichever languge(s) they would like to add.  
