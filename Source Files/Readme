@@ -21,6 +21,8 @@ Author Note: I ran this in Windows Powershell (ie python [python file]) - the sy
 Getting PCS Character Data
 ------------------------------------------------------------------------------------------------------
 
+Use Tools in Zip File: : Get_PCSData.zip
+
 1) Run "1_PCSProcess.py"
 
 Open up Chrome in Remote Debugging Mode to the Jedipedia File Reader tab, load the assets, and go to the node section.
@@ -75,6 +77,8 @@ Zabraks have two variants of the species in-game, a "Republic" variant and an "I
 Eye Colors
 ------------------------------------------------------------------------------------------------------
 
+Use Tools in Zip File: Get_EyeHairSkin_Color.zip
+
 Values to populate the eye color values (ie hue, saturation, etc) are found inside the node files, and need to be extracted in a special way.
 
 Eye Color files are found inside the "Dynamic"->"eyecolor" node - these need to get saved to a JSON file.  To save these to a JSON file:
@@ -117,6 +121,8 @@ Run the file, it creates a new JSON file called "eyecolor.json", copy this file 
 Skin Colors
 ------------------------------------------------------------------------------------------------------
 
+Use Tools in Zip File: Get_EyeHairSkin_Color.zip
+
 Similar process to above:
 
 1) Jedipedia 
@@ -156,6 +162,8 @@ Run the file, it creates a new JSON file called "skincolor.json", copy this file
 ------------------------------------------------------------------------------------------------------
 Hair Colors
 ------------------------------------------------------------------------------------------------------
+
+Use Tools in Zip File: Get_EyeHairSkin_Color.zip
 
 Similar process to above:
 
@@ -206,6 +214,8 @@ Getting Armor Data
 ------------------------------------------------------------------------------------------------------
 Step 1 - Getting IPP Data
 ------------------------------------------------------------------------------------------------------
+
+Use Tools in Zip File: Get_ArmorData_1_IPPData.zip
 
 Pre-Reqs:
 
@@ -267,6 +277,8 @@ OPTIONAL: All inputs need to be updated for your file path, but once done, can r
 ------------------------------------------------------------------------------------------------------
 Step 2 - Getting ITM Data
 ------------------------------------------------------------------------------------------------------
+
+Use Tools in Zip File: Get_ArmorData_2_IPPData.zip
 
 Pre-Reqs:
 
@@ -338,6 +350,8 @@ NOTE: All four of the .py file need any of their inputs updated, but instead of 
 ------------------------------------------------------------------------------------------------------
 Step 3 - Combining ITM and IPP Data
 ------------------------------------------------------------------------------------------------------
+
+Use Tools in Zip File: Get_ArmorData_3_IPPData.zip
 
 Pre-Reqs
 
