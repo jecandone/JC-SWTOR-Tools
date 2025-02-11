@@ -36,7 +36,7 @@ Repeat this for any armor pieces to import, or leave them blank, and click "Impo
 
 **<h3>Armor Import (FQN)</h3>**
 
-Allows for armor import by looking up FQN values.  Some armor pieces have part of their name in the FQN value (ie the havoc squad armor, shae vizla armor, satele shan armor, etc), but others do not.  If the armor you're searching for doesn't appear likely the FQN name and the in-game name are different, and the FQN name would need to be looked up manually at Jedipedia).  If after a game update, an armor does not appear (since the file holding all the info for the FQN names and related values needs to be updated manually), then the other Armor Import section can be used by looking up the ModelID and the ColorSCheme.
+Allows for armor import by looking up either in-game (English) name values or by FQN values (if set in "Global Settings").  Note that many armor values have been translated from their FQN name to their in game name, but there are still armor pieces that have not been.  If searching for an armor piece by the in-game name and it does not appear as one of the options, searching for it by the FQN name will most likely find it.
 
 **<h3>Save Texture Files</h3>**
 
@@ -48,7 +48,7 @@ Ability to search for any dye file in the game, and import it into the active ob
 
 **<h3>Node Groups to SWTOR Garment Shader</h3>**
 
-Since dyes get applied as node groups, this function adds node groups to an active object that has a ZG SWTOR Garment Shader.  Intended to be able to quickly apply different dye colors.  
+Since dyes get applied as node groups, this function adds node groups to an active object that has an existing ZG SWTOR Garment Shader without node groups created & connected.  Intended to be able to quickly apply different dye colors to previously created SWTOR nodes.  
 
 **<h3>Character Creation</h3>**
 
@@ -65,15 +65,15 @@ Import character based on input settings.  Contains the following features:
 - Keep Head (Skin) Model: Default is having this checked - having this option unchecked does not import the head (skin) objects.
 - TORC or Game corruption values: Ssee "Global Settings" tab - TORC and the ingame files calculate eye color values for corruption levels differently, one can pick either option to use.
 
-Other features/items worth mentioning - there is a "unify to Chest Colors" option in the "Dye Color: Overall" field, to be able to use the equivelent of the in game feature for unifying to chest piece.  All imports for hair with either of the skeleton parenting option enabled auto fixes the vertex groups and sets them all to the "head" vertex group. 
+Other features/items worth mentioning - there is a "Unify to Chest Colors" option in the "Dye Color: Overall" field, to be able to use the equivelent of the in game feature for unifying to chest piece.  All imports for hair with either of the skeleton parenting option enabled auto fixes the vertex groups and sets them all to the "head" vertex group. 
 
-Issues/Notes - for certain armor pieces (for example, many chest armor pieces that have a hood), this plugin will import all attachments to armor pieces, and sometimes the game only uses part of the attachments for an armor set.  One can just delete the excess attachments after import to fix this.  Similar issue for "hair" objects (ie hair, twilek headbands) and "facehair" objects (facehair, jewelery), this will import all attachments for these, and the game only uses part of the attachents for them.  One can delete the excess attachment pieces to get the "Hair" or "facehair" to the proper ingame version of it.
+Issues/Notes - for certain armor pieces (for example, many chest armor pieces that have a hood), this plugin will import all attachments to armor pieces, and sometimes the game only uses part of the attachments for an armor set.  One can just delete the excess attachments after import to fix this.  Similar issue for "hair" objects (ie hair, twilek headbands) and "facehair" objects (facehair, jewelery), this will import all attachments for these, and the game only uses part of the attachents for them.  One can delete the excess attachment pieces to get the "Hair" or "facehair" to the proper in-game version of it.
 
 **<h3>NPC Import</h3>**
 
-Import NPCs.  This allows import of regular (non-creature) as well as creature (both humanoid and non-humanoid) NPCs.  To use this feature:
+Import NPCs.  This allows import of regular (non-creature, ie Kira Carsen) as well as creature (both humanoid, ie Lana and non-humanoid, ie creature) NPCs.  To use this feature:
 
-To to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC, and select the NPC you want to import.  For example Nadia Grell, Alliance version of the character.  Look under the appearance section, and the FQN, and copy this.  In this example, "npp.daily_area.ossus.world.republic.nadia_grell".    
+Go to to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC, and select the NPC you want to import.  For example Nadia Grell, Alliance version of the character.  Look under the appearance section, and the FQN, and copy this.  In this example, "npp.daily_area.ossus.world.republic.nadia_grell".    
 
 ![image](https://github.com/user-attachments/assets/102f4fd7-84f6-4701-a03c-f18b99b466ae)
 
