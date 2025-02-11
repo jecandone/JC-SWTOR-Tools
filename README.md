@@ -1,10 +1,18 @@
 **<h1>JC SWTOR Tools</h1>**
 
-The tools here allow for the import of armor into Blender, as well as adding a character creator.
+Tools built for Blender 3.6 (and tested in Blender 3.6.7) to be able to do various functions for SWTOR relating to blender:
+- Armor Import
+- Dye Import
+- Character Creation
+- NPC Import
 
-**<h2>Enabling the Plugin</h2>**
+**<h2>Prerequisites/Enabling the Plugin</h2>**
 
-Make sure to point to the path of your extracted SWTOR assets to the "resources" folder.  
+This plugin makes use of the "ZeroGravitas SWTOR Tools" (https://github.com/SWTOR-Slicers/ZG-SWTOR-Tools) for importing objects and material processing.  This in turn requires the use of the .gr2 importer (https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x/releases/tag/4.0.6).
+
+Built and tested this plugin with the "2024-09" version of the ZG SWTOR Tools and the v4.0.4 of the .gr2 importer.
+
+When enabling the plugin through Blender, make sure to point the input directory to the "resources" folder of your extracted SWTOR assets.  
 
 **<h2>Sections of the Plugin<h2>**
 
