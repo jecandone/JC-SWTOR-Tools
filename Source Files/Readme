@@ -201,7 +201,15 @@ Save the JSON file to the folder that has "1_PropIDReplace.py".  Note, it's impo
 
 Run the file, it creates a new JSON file called "haircolor.json", copy this file to the "char\haircolor" folder of the plugin directory
 
-STEP #1
+------------------------------------------------------------------------------------------------------
+Head Races
+------------------------------------------------------------------------------------------------------
+
+1) Run 1_GetRaceValues.py
+
+This will prompt for the location of the head (face) race values, enter in the location of the face index.xml file (ie where "\resources\art\dynamic\face" is located)
+
+Saves a CSV file called "HeadRaces.csv", place this file inside the "Char" directory of the plugin.
 
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
