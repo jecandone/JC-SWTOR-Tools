@@ -244,7 +244,7 @@ Author Note: I ran this in Windows Powershell (ie python [python file]) - the sy
 
 Input: Chrome Directory ('chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"')
 Input: .TOR file directory ('tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]')
-Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Jeff\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
+Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Test\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
 Input: CSV file of nodes ('CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')  # CSV file path')
 Input: Property ID Translation File ('MAPPING_FILE = r"GOM.fields.json"  # Path to your mapping file')
 
@@ -316,7 +316,7 @@ Author Note: I ran this in Windows Powershell (ie python [python file]) - the sy
 
 Input: Chrome Directory ('chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"')
 Input: .TOR file directory ('tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]')
-Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Jeff\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
+Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Test\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
 Input: CSV file of nodes ('CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')  # CSV file path')
 Input: Property ID Translation File ('MAPPING_FILE = r"GOM.fields.json"  # Path to your mapping file')
 
