@@ -93,4 +93,6 @@ Once the settings are stored, the NPC can be previewed (has the same Preview Pos
 
 Some NPCs (for example Kira Carsen Post KOTFE, Lana pre-KOTFE) have armor leg pieces that import with a second material slot, and this second material slot will normally be processed as a skin material, even though in the actual NPC this is an armor material, not a skin shader.  To fix this, select the "2nd Material Slot - Non-Skin Material" option, and the second material slot in the leg will be correctly set as an armor material.  If one is unsure if an NPC has this or not, this can be tried out in the preview for NPCs to determine which of these two options need to be selected.
 
+Some NPCs can have multiple enteries for some of the slots (ie multiple skin color options, multiple eye color options, etc).  These will show up as additional lines in Jedpedia (ie for multiple skin color options, instead of just displaying "1", it can have "1", "2", "3", "4", as the start of different entries for different skin color options).  One can delete entries for options they don't want to create different versions of the same NPC from the same NPC data.  
+
 **<h2>Source Files and Updating References Files</h2>**
