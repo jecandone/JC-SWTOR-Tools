@@ -1,6 +1,6 @@
 **<h1>JC SWTOR Tools</h1>**
 
-Tools built for Blender 3.6 (and tested in Blender 3.6.7) to be able to do various functions for SWTOR relating to blender:
+Tools built for Blender 3.6 (and tested in Blender 3.6.7) to be able to do various functions for SWTOR:
 - Armor Import
 - Dye Import
 - Character Creation
