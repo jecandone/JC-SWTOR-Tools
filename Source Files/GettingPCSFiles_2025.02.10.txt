@@ -1,0 +1,186 @@
+------------------------------------------------------------------------------------------------------
+Character Appearance Option Files
+------------------------------------------------------------------------------------------------------
+
+0) Pre-Reqs:
+
+Chrome Driver - need a version of chrome driver to be able to run the python file (https://googlechromelabs.github.io/chrome-for-testing/) - make sure to download the "chromedriver"
+
+Author Note: I ran this in Windows Powershell (ie python [python file]) - the system needs the below to run, if they're not installed in your system, they can be installed via typing in the commands below:
+
+	pip install psutil
+	pip install selenium
+	pip install pyautogui
+	pip install pyperclip
+
+1) Run "1_PCSProcess.py"
+
+Open up Chrome in Remote Debugging Mode to the Jedipedia File Reader tab, load the assets, and go to the node section.
+
+Author Note: I ran this code in Powershell to open up remote debugging mode and will navigate to the right URL:
+
+& "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 "https://swtor.jedipedia.net/reader"
+
+Wait for the nodes to load, the navigate to the PCS node.  
+
+Inside the PCS node, there is a node for each class.  Within each class, there is a folder for either "male" or "female".  Within each gender node there is a node for a species.  Click on a node for a species.
+
+Make sure to change the view from "Table" to "Parsed" in the top right hand side.
+
+Once in the parsed view, select all (control-a)  
+
+Run the 1_PCSProcess.py script file - this copies data based on the selection in the web browser into file with the following syntax:
+
+[Class]_[gender]_[Cathar]_raw.csv
+
+One could either do this for all class/gender/species combinations, or can run it on a certain one.  If one is trying to do this for all species, the only exception would be the two Zabrak Species, which have their own step later on.  
+
+2) Run "2_CSVProcessAll.py"
+
+This takes the raw CSV file from previous steps, and splits it into multiple files in multiple folders inside of the folder "output", as well as creates a file "CharSliderLabels.csv", as well as a files formatted as 
+
+"[Class]_[gender]_[Cathar].csv"
+"[Class]_[gender]_[Cathar]_sliders.csv"
+
+3) Run "3_RenameRawFiles.py"
+
+Optional step - renames all the CSV files in the current folder (except "CharSliderLabels.csv"), adding the prefix "zz_" to help with sorting when copying files.
+
+4) Copy Character Folders within "Output"
+
+Copy all the folders within the "output" folder to the "Chars" directory of the plugin. 
+
+5) Copy "CharSliderLabels.csv"
+
+This file is a CSV which contains the names of the sliders based on species, class, gender, and what the minimum and maximum values are.  
+
+Copy this to the "Chars" folder of the plugin.  
+
+Note: If running this for the first time or running it for all combinations of class/species/gender, then one could just copy the file to the "Chars" folder.  If only some combinations are being updated, one could open up this newly created CSV file, and replace the contents inside the existing "CharSliderLabels.csv" that's within the plugin folder.  
+
+6) Run either "5_ZabrakRename_Imp.py" or "5_ZabrakRename_Rep.py"
+
+Zabraks have two variants of the species in-game, a "Republic" variant and an "Imperial" variant.  The "Imp" version of this file just replaces all instances in the folders and CSV file names of "Zabrak" with "ZabrakImp", and the "Rep" version does the same, replacing "Zabrak" with "ZabrakRep".  The only thing that would need to be manually updated is the species column inside of "CharSliderLabels.csv".
+
+
+------------------------------------------------------------------------------------------------------
+Eye Colors
+------------------------------------------------------------------------------------------------------
+
+Values to populate the eye color values (ie hue, saturation, etc) are found inside the node files, and need to be extracted in a special way.
+
+Eye Color files are found inside the "Dynamic"->"eyecolor" node - these need to get saved to a JSON file.  To save these to a JSON file:
+
+1) Jedipedia 
+
+Go to the Jedipedia File Reader, go to the node section, and open up the web developer console, and paste in the following code:
+
+
+copy(stb['str.itm']);
+
+items=[];
+
+readAllNodes('dynamic.eyecolor', (node, obj) => items.push({node, obj}));
+
+function downloadJsonFile(data, filename) {
+    // Creating a blob object from non-blob data using the Blob constructor
+    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    // Create a new anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename || 'download';
+    a.click();
+    a.remove();
+ }
+
+Press enter, let the console grab all the values, then type in the code below, and hit enter:
+
+downloadJsonFile(items, 'eyecolor_raw')
+
+Save the JSON file to the folder that has "1_PropIDReplace.py".  Note, it's important to have the "_raw" at the end of the filename, the python file looks to replace values that have "_raw" at the end of it.
+
+
+2) Run '1_PropIDReplace.py'
+
+Run the file, it creates a new JSON file called "eyecolor.json", copy this file to the "char\eyecolor" folder of the plugin directory
+
+------------------------------------------------------------------------------------------------------
+Skin Colors
+------------------------------------------------------------------------------------------------------
+
+Similar process to above:
+
+1) Jedipedia 
+
+Go to the Jedipedia File Reader, go to the node section, and open up the web developer console, and paste in the following code:
+
+
+copy(stb['str.itm']);
+
+items=[];
+
+readAllNodes('dynamic.skincolor', (node, obj) => items.push({node, obj}));
+
+function downloadJsonFile(data, filename) {
+    // Creating a blob object from non-blob data using the Blob constructor
+    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    // Create a new anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename || 'download';
+    a.click();
+    a.remove();
+ }
+
+Press enter, let the console grab all the values, then type in the code below, and hit enter:
+
+downloadJsonFile(items, 'skincolor_raw')
+
+Save the JSON file to the folder that has "1_PropIDReplace.py".  Note, it's important to have the "_raw" at the end of the filename, the python file looks to replace values that have "_raw" at the end of it.
+
+
+2) Run '1_PropIDReplace.py'
+
+Run the file, it creates a new JSON file called "skincolor.json", copy this file to the "char\skincolor" folder of the plugin directory
+
+------------------------------------------------------------------------------------------------------
+Hair Colors
+------------------------------------------------------------------------------------------------------
+
+Similar process to above:
+
+1) Jedipedia 
+
+Go to the Jedipedia File Reader, go to the node section, and open up the web developer console, and paste in the following code:
+
+
+copy(stb['str.itm']);
+
+items=[];
+
+readAllNodes('dynamic.haircolor', (node, obj) => items.push({node, obj}));
+
+function downloadJsonFile(data, filename) {
+    // Creating a blob object from non-blob data using the Blob constructor
+    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    // Create a new anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename || 'download';
+    a.click();
+    a.remove();
+ }
+
+Press enter, let the console grab all the values, then type in the code below, and hit enter:
+
+downloadJsonFile(items, 'haircolor_raw')
+
+Save the JSON file to the folder that has "1_PropIDReplace.py".  Note, it's important to have the "_raw" at the end of the filename, the python file looks to replace values that have "_raw" at the end of it.
+
+
+2) Run '1_PropIDReplace.py'
+
+Run the file, it creates a new JSON file called "haircolor.json", copy this file to the "char\haircolor" folder of the plugin directory
