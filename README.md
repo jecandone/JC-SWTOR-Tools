@@ -6,6 +6,8 @@ Tools built for Blender 3.6 (and tested in Blender 3.6.7) to be able to do vario
 - Character Creation
 - NPC Import
 
+This plugin uses information on armor and character creation properties that is stored in the plugin directory from game update from update 7.5.1 (Oct. 1, 2024).  Character selection properties added after this will not appear, and neither will armor that have been added after this.  However, armor pieces from future updates can still be added via the "Armor Import (Non-FQN)", as long as the extracted assets are up to date. 
+
 **<h2>Prerequisites/Enabling the Plugin</h2>**
 
 This plugin makes use of the "ZeroGravitas SWTOR Tools" (https://github.com/SWTOR-Slicers/ZG-SWTOR-Tools) for importing objects and material processing.  This in turn requires the use of the .gr2 importer (https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x/releases/tag/4.0.6).
@@ -16,7 +18,7 @@ When enabling the plugin through Blender, make sure to point the input directory
 
 **<h2>Sections of the Plugin<h2>**
 
-**<h3>Armor Import</h3>**
+**<h3>Armor Import (Non-FQN)</h3>**
 
 Allows the import of armor via the ModelID, MaterialID, ColorSchemeID values.  To find this, search for any armor on https://swtor.jedipedia.net/en, for example "Havoc Squad Greaves".  Take a look under name under the appearance section, "ipp.mtx.season7.havoc_squad.legs".
 
@@ -38,7 +40,7 @@ This can be helpful if the armor source files have not been updated for future g
 
 **<h3>Armor Import (FQN)</h3>**
 
-Allows for armor import by looking up either in-game (English) name values or by FQN values (if set in "Global Settings").  Note that many armor values have been translated from their FQN name to their in game name, but there are still armor pieces that have not been.  If searching for an armor piece by the in-game name and it does not appear as one of the options, searching for it by the FQN name will most likely find it.
+Allows for armor import by looking up either in-game (English) name values or by FQN values (if set in "Global Settings").  Note that many armor values have been translated from their FQN name to their in game name, but not all.  If in searching for an armor by it's in-game name, search for it by its FQN name and it most likely will be in there, unless it has been added after the last time the armor source files were updated.
 
 **<h3>Save Texture Files</h3>**
 
