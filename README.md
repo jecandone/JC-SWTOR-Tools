@@ -18,7 +18,7 @@ When enabling the plugin through Blender, make sure to point the input directory
 
 **<h3>Armor Import</h3>**
 
-Allows the import of armor via the ModelID and ColorSchemeID values.  To find this, search for any armor on https://swtor.jedipedia.net/en, for example "Havoc Squad Greaves".  Take a look under name under the appearance section, "ipp.mtx.season7.havoc_squad.legs".
+Allows the import of armor via the ModelID, MaterialID, ColorSchemeID values.  To find this, search for any armor on https://swtor.jedipedia.net/en, for example "Havoc Squad Greaves".  Take a look under name under the appearance section, "ipp.mtx.season7.havoc_squad.legs".
 
 ![image](https://github.com/user-attachments/assets/e41e89f7-5304-4376-bd28-47c89034f5e8)
 
