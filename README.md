@@ -107,7 +107,7 @@ Corruption Values - corruption values for eyes in the TORC Character Creator are
 
 ![image](https://github.com/user-attachments/assets/85902a56-2575-471c-997a-35e4bcc7aa01)
 
-Material Processing - Choose between the process for processing material file - using the default method (ZG SWTOR Tools), or using a custom version of it
+Material Processing - Choose between the process for processing material file - using the default method (ZG SWTOR Tools), or using a custom version of it that can be tried if the default method has issues.
 
 Preview Render Engine - set the render engine for the character creation and NPC import preview - choose between Eevee or Cycles.
 
