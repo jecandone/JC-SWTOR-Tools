@@ -28,7 +28,7 @@ Search this value in the "node" section of the file reader (https://swtor.jedipe
 
 Copy the value from "appAppearanceSlotModelID" to the appropriate "ModelID" part of the blender plugin, "appAppearanceSlotMaterialIndex" to the Material ID field, and "ippColorScheme" to the Color Scheme ID field.
 
-![image](https://github.com/user-attachments/assets/fcf00d82-a7fc-451f-b8c5-17e186f2e7a2)
+![image](https://github.com/user-attachments/assets/b77033ed-40b5-46ed-bca1-57412a3b4bda)
 
 Repeat this for any armor pieces to import, or leave them blank, and click "Import Armor" and the armor will import:
 
