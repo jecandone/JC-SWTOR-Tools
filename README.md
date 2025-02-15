@@ -26,7 +26,7 @@ Search this value in the "node" section of the file reader (https://swtor.jedipe
 
 ![image](https://github.com/user-attachments/assets/7aae6d6b-5cd9-49d6-8135-028b378c0902)
 
-Copy the value from "appAppearanceSlotModelID" to the appropriate "ModelID" part of the blender plugin, and do the same thing with the "ippColorScheme" value.  You can also select a body type.  
+Copy the value from "appAppearanceSlotModelID" to the appropriate "ModelID" part of the blender plugin, "appAppearanceSlotMaterialIndex" to the Material ID field, and "ippColorScheme" to the Color Scheme ID field.
 
 ![image](https://github.com/user-attachments/assets/fcf00d82-a7fc-451f-b8c5-17e186f2e7a2)
 
