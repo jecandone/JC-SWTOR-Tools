@@ -98,3 +98,18 @@ Some NPCs on Jedipedia (for example, one of the pre-KOTFE Lana NPCs), have speci
 Some NPCs (for example Kira Carsen Post KOTFE, Lana pre-KOTFE) have armor leg pieces that import with a second material slot, and this second material slot will normally be processed as a skin material, even though in the actual NPC this is an armor material, not a skin shader.  To fix this, select the "2nd Material Slot - Non-Skin Material" option, and the second material slot in the leg will be correctly set as an armor material.  If one is unsure if an NPC has this or not, this can be tried out in the preview for NPCs to determine which of these two options need to be selected.
 
 Some NPCs can have multiple enteries for some of the slots (ie multiple skin color options, multiple eye color options, etc).  These will show up as additional lines in Jedpedia (ie for multiple skin color options, instead of just displaying "1", it can have "1", "2", "3", "4", as the start of different entries for different skin color options).  One can delete entries for options they don't want to create different versions of the same NPC from the same NPC data.  
+
+**<h3>Global Settings</h3>**
+
+Armor Langauge - can set the langauge of the armor names - currently only "English", and "FQN" (ie displaying the FQN names instead of the in-game names) are functional.
+
+Corruption Values - corruption values for eyes in the TORC Character Creator are slightly different than those calculated by the values derived directly from the in-game nodes - can choose between using the TORC values or the in-game corruption values for eyes.
+
+Material Processing - Choose between the process for processing material file - using the default method (ZG SWTOR Tools), or using a custom version of it
+
+Preview Render Engine - set the render engine for the character creation and NPC import preview - choose between Eevee or Cycles.
+
+Direction Maps - Enables or disables the direction map texture slot on hair & facehair import.  Leaving this enabled will leave the texture slot in - if a direction map is not used a hair will appear as a pink color.  Disabling this will mute the direction map node.
+
+Debugging outputs - write the debugging output to a file for various functions of the plugin instead of writing it to a console.  Note that if chosen for a particular function, it will not output the debugging code to the system console.
+
