@@ -105,6 +105,8 @@ Armor Langauge - can set the langauge of the armor names - currently only "Engli
 
 Corruption Values - corruption values for eyes in the TORC Character Creator are slightly different than those calculated by the values derived directly from the in-game nodes - can choose between using the TORC values or the in-game corruption values for eyes.
 
+![image](https://github.com/user-attachments/assets/93eeb89b-27a2-4b88-a5b5-60bf0d7ce6ff)
+
 Material Processing - Choose between the process for processing material file - using the default method (ZG SWTOR Tools), or using a custom version of it
 
 Preview Render Engine - set the render engine for the character creation and NPC import preview - choose between Eevee or Cycles.
