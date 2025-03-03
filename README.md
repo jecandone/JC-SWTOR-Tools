@@ -44,7 +44,7 @@ Allows for armor import by looking up either in-game (English) name values or by
 
 **<h3>Save Texture Files</h3>**
 
-Takes textures, saves them to the folder specified, and updates the Blender file to reference the textures in the newly saved location.  Useful for saving textures file in a different folder when using the armor import function, but can also be used if for any other purposes, such as if a .gr2 file was manually imported and the process materials function from the ZG SWTOR Tools.  Can be done for the entire scene or just for selected objects.
+Takes textures, saves them to the folder specified, and updates the Blender file to reference the textures in the newly saved location.  Useful for saving textures file in a different folder when using the armor import function, but can also be used if for any other purposes, such as if a .gr2 file was manually imported and the process materials function from the ZG SWTOR Tools was used, and one wanted to save the textures to a different folder.  Can be done for the entire scene or just for selected objects.
 
 **<h3>Dye Import</h3>**
 
