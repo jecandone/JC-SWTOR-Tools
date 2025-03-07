@@ -245,26 +245,20 @@ Property ID Translation File - needs a .json file to process the "untranslated" 
 
 Author Note: I ran this in Windows Powershell (ie python [python file]) - the system needs the below to run, if they're not installed in your system, they can be installed via typing in the commands below:
 
-	pip install psutil
 	pip install selenium
-	pip install pyautogui
-	pip install pyperclip
 
 1) 1_ProcessingArmorValues.py
 
-Input: Chrome Directory ('chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"')
-Input: .TOR file directory ('tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]')
-Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Test\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
-Input: CSV file of nodes ('CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')  # CSV file path')
-Input: Property ID Translation File ('MAPPING_FILE = r"GOM.fields.json"  # Path to your mapping file')
+Input: .TOR file directory [tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]']
+Input:  Chrome Driver Directory [service = Service('service = Service('C:\\Users\\TestUser\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe']
+Input: CSV file of nodes [CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')]
+Input: Property ID Translation File [MAPPING_FILE = r"GOM.fields.json"]
 
 Downloads all untranslated node data for all files in the "ipp" node section to "raw" folder
 
-NOTE: This function mimics saving files by hand in one part of it, if one clicks around or navigates to other web pages while this is running, the function will not work (it will fail to save the JSON files)
-
 2) 2_json-field-replacer.py
 
-Input: Name Translation File ('fields_mapping = load_json_file('GOM.fields.json')')
+Input: Name Translation File [fields_mapping = load_json_file('GOM.fields.json')]
 
 Replaces the property IDs from the downloaded JSON files with translated names, created an output in the "processed" folder
 
@@ -280,7 +274,6 @@ Column #5: Color Scheme ID
 Column #6: Material IID
 
 4) Place the newly created CSV file ("ippArmorValues.csv") into the "ArmorIPP" folder of the plugin.
-
 
 OPTIONAL: All inputs need to be updated for your file path, but once done, can run the single script "RunAll_GettingIPP.py" to run all three files in order.  
 
@@ -316,23 +309,16 @@ ITM ID Translation File - needs a .json file to process the "untranslated" ITM I
 
 Author Note: I ran this in Windows Powershell (ie python [python file]) - the system needs the below to run, if they're not installed in your system, they can be installed via typing in the commands below:
 
-	pip install psutil
 	pip install selenium
-	pip install pyautogui
-	pip install pyperclip
-
 
 1) 1_ProcessingArmorValues.py
 
-Input: Chrome Directory ('chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"')
-Input: .TOR file directory ('tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]')
-Input:  Chrome Driver Directory ('driver = webdriver.Chrome(service=Service('C:\\Users\\Test\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe'), options=options)')
-Input: CSV file of nodes ('CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')  # CSV file path')
-Input: Property ID Translation File ('MAPPING_FILE = r"GOM.fields.json"  # Path to your mapping file')
+Input: .TOR file directory [tor_files = [os.path.join('A:\\Games\\SWTOR\\Assets', f) for f in os.listdir('A:\\Games\\SWTOR\\Assets') if f.endswith('.tor')]']
+Input:  Chrome Driver Directory [service = Service('service = Service('C:\\Users\\TestUser\\Desktop\\testDirect\\chromedriver-win64\\chromedriver.exe']
+Input: CSV file of nodes [CSV_FILE = os.path.join(INPUT_DIRECTORY, 'NodeMapping.csv')]
+Input: Property ID Translation File [MAPPING_FILE = r"GOM.fields.json"]
 
 Downloads all untranslated node data for all files in the "itm" node section to "raw" folder
-
-NOTE: This function mimics saving files by hand in one part of it, if one clicks around or navigates to other web pages while this is running, the function will not work (it will fail to save the JSON files)
 
 2) 2_json-field-replacer.py
 
