@@ -69,19 +69,19 @@ Import character based on input settings.  Contains the following features:
 - Keep Head (Skin) Model: Default is having this checked - having this option unchecked does not import the head (skin) objects.
 - TORC or Game corruption values: Ssee "Global Settings" tab - TORC and the ingame files calculate eye color values for corruption levels differently, one can pick either option to use.
 
-Other features/items worth mentioning - there is a "Unify to Chest Colors" option in the "Dye Color: Overall" field, to be able to use the equivelent of the in game feature for unifying to chest piece.  All imports for hair with either of the skeleton parenting option enabled auto fixes the vertex groups and sets them all to the "head" vertex group. 
+Other features/items worth mentioning - there is a "Unify to Chest Colors" option in the "Dye Color: Overall" field, to be able to use the equivalent of the in game feature for unifying to chest piece.  All imports for hair with either of the skeleton parenting option enabled auto fixes the vertex groups and sets them all to the "head" vertex group. 
 
-Issues/Notes - for certain armor pieces (for example, many chest armor pieces that have a hood), this plugin will import all attachments to armor pieces, and sometimes the game only uses part of the attachments for an armor set.  One can just delete the excess attachments after import to fix this.  Similar issue for "hair" objects (ie hair, twilek headbands) and "facehair" objects (facehair, jewelery), this will import all attachments for these, and the game only uses part of the attachents for them.  One can delete the excess attachment pieces to get the "Hair" or "facehair" to the proper in-game version of it.
+Issues/Notes - for certain armor pieces (for example, many chest armor pieces that have a hood), this plugin will import all attachments to armor pieces, and sometimes the game only uses part of the attachments for an armor set.  One can just delete the excess attachments after import to fix this.  Similar issue for "hair" objects (ie hair, twilek headbands) and "facehair" objects (facehair, jewelery), this will import all attachments for these, and the game only uses part of the attachments for them.  One can delete the excess attachment pieces to get the "Hair" or "facehair" to the proper in-game version of it.
 
 **<h3>NPC Import</h3>**
 
 Import NPCs.  This allows import of regular (non-creature, ie Kira Carsen) as well as creature (both humanoid, ie Lana and non-humanoid, ie creature) NPCs.  To use this feature:
 
-Go to to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC, and select the NPC you want to import.  For example Nadia Grell, Alliance version of the character.  Look under the appearance section, and the FQN, and copy this.  In this example, "npp.daily_area.ossus.world.republic.nadia_grell".    
+Go to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC, and select the NPC you want to import.  For example Nadia Grell, Alliance version of the character.  Look under the appearance section, and the FQN, and copy this.  In this example, "npp.daily_area.ossus.world.republic.nadia_grell".    
 
 ![image](https://github.com/user-attachments/assets/102f4fd7-84f6-4701-a03c-f18b99b466ae)
 
-Go the the Jedipedia File Reader, to the node section, search for the node, and open it.  
+Go to the Jedipedia File Reader, to the node section, search for the node, and open it.  
 
 ![image](https://github.com/user-attachments/assets/358c9171-5a00-4ea6-9f77-0ab534de15d2)
 
@@ -95,7 +95,7 @@ Once the settings are stored, the NPC can be previewed (has the same Preview Pos
 
 Unique to the NPC Import is the "Special Eye Material" and the "2nd Material Slot - Non-Skin Material" options.  
 
-Some NPCs on Jedipedia (for example, one of the pre-KOTFE Lana NPCs), have special eye materials, and they don't appear in the Appearence FQN node.  To get around this, one would need to click on the "Special Eye Material" checkbox, then go back to the database page for Jedipedia of the NPC (not the node in the reader), and look under head, and get the eye material name.  One would then need to put that name into the input box for the special eye material.  
+Some NPCs on Jedipedia (for example, one of the pre-KOTFE Lana NPCs), have special eye materials, and they don't appear in the Appearance FQN node.  To get around this, one would need to click on the "Special Eye Material" checkbox, then go back to the database page for Jedipedia of the NPC (not the node in the reader), and look under head, and get the eye material name.  One would then need to put that name into the input box for the special eye material.  
 
 ![image](https://github.com/user-attachments/assets/c2b31a5f-56b8-40bd-a2d4-5360743d9653)
 
@@ -105,7 +105,7 @@ Some NPCs can have multiple enteries for some of the slots (ie multiple skin col
 
 **<h3>Global Settings</h3>**
 
-Armor Langauge - can set the langauge of the armor names - currently only "English", and "FQN" (ie displaying the FQN names instead of the in-game names) are functional.
+Armor Language - can set the language of the armor names - currently only "English", and "FQN" (ie displaying the FQN names instead of the in-game names) are functional.
 
 Corruption Values - corruption values for eyes in the TORC Character Creator are slightly different than those calculated by the values derived directly from the in-game nodes - can choose between using the TORC values or the in-game corruption values for eyes.
 
