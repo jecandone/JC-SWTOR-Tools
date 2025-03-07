@@ -109,7 +109,7 @@ Armor Language - can set the language of the armor names - currently only "Engli
 
 Corruption Values - corruption values for eyes in the TORC Character Creator are slightly different than those calculated by the values derived directly from the in-game nodes - can choose between using the TORC values or the in-game corruption values for eyes.
 
-![image](https://github.com/user-attachments/assets/5435be43-3046-4b81-a4b9-eb02824ad4f0)
+![image](https://github.com/user-attachments/assets/068e7d3d-dc20-4e86-9814-d75e1af7f46b)
 
 Material Processing - Choose between the process for processing material file - using the default method (ZG SWTOR Tools), or using a custom version of it that can be tried if the default method has issues.
 
