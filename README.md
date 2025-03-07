@@ -60,7 +60,7 @@ Import character based on input settings.  Contains the following features:
 
 - Rename/Group Objects: Rename all objects and materials, and put them into a seperate group, based on the input of the "Character Name" field
 - Normal Skeleton Import: Import & parent objects to the normal/default skeleton
-- JC Skeleton/Empty: Import & parent object to a modified version of the normal skeleton - deleted VFX bones, parented the skeleton to a plain axis empty, and added two single arrow empties parented to the plain axis empty.
+- JC Skeleton/Empty: Import & parent object to a modified version of the normal skeleton - deleted VFX bones and bones set to display "in-front", parented the skeleton to a plain axis empty, and added two single arrow empties parented to the plain axis empty.
 - Create Folder Structure: Saves materials to selected folder directory
 - Character Preview: Press the "Preview" button to preview the current character.  Character by default is in one of the character creation poses, uncheck the "Preview Pose" to not use this pose and use an unposed character in the preview
 - Existing Character - Import Settings: Import an existing character created with this plugin - opens up a text editor window to paste in settings.
