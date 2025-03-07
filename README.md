@@ -66,8 +66,8 @@ Import character based on input settings.  Contains the following features:
 - Existing Character - Import Settings: Import an existing character created with this plugin - opens up a text editor window to paste in settings.
 - Export Character JSON: Creates paths.json, skeleton.json, preset.json, creates folder structure, and saves material files to folders - for using with ZG SWTOR Tool Character Importer.
 - Randomize: Randomizes the various input options (excluding the armor options).  Each input option has a lock button to exclude it from the randomizing function.
-- Keep Head (Skin) Model: Default is having this checked - having this option unchecked does not import the head (skin) objects.
-- TORC or Game corruption values: Ssee "Global Settings" tab - TORC and the ingame files calculate eye color values for corruption levels differently, one can pick either option to use.
+- Keep Head (Skin) Model: Default is having this checked - having this option unchecked does not import the head (skin) objects.  For use if importing a helmet, and don't want to import the head/hair.  
+- TORC or Game corruption values: See "Global Settings" tab - TORC and the ingame files calculate eye color values for corruption levels differently, one can pick either option to use.
 
 Other features/items worth mentioning - there is a "Unify to Chest Colors" option in the "Dye Color: Overall" field, to be able to use the equivalent of the in game feature for unifying to chest piece.  All imports for hair with either of the skeleton parenting option enabled auto fixes the vertex groups and sets them all to the "head" vertex group. 
 
