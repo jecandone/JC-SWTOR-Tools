@@ -75,7 +75,7 @@ Issues/Notes - for certain armor pieces (for example, many chest armor pieces th
 
 **<h3>NPC Import</h3>**
 
-Import NPCs.  This allows import of regular (non-creature, ie Kira Carsen) as well as creature (both humanoid, ie Lana and non-humanoid, ie creature) NPCs.  To use this feature:
+Import NPCs.  This allows import of regular (non-creature, ie Kira Carsen) NPCs, as well as creature (both humanoid, ie Lana and non-humanoid, ie kath hound) NPCs.  To use this feature:
 
 Go to the Jedipedia database section (https://swtor.jedipedia.net/en), and search for an NPC, and select the NPC you want to import.  For example Nadia Grell, Alliance version of the character.  Look under the appearance section, and the FQN, and copy this.  In this example, "npp.daily_area.ossus.world.republic.nadia_grell".    
 
