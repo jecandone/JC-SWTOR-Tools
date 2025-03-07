@@ -61,7 +61,7 @@ Import character based on input settings.  Contains the following features:
 - Rename/Group Objects: Rename all objects and materials, and put them into a seperate group, based on the input of the "Character Name" field
 - Normal Skeleton Import: Import & parent objects to the normal/default skeleton
 - JC Skeleton/Empty: Import & parent object to a modified version of the normal skeleton - deleted VFX bones and bones set to display "in-front", parented the skeleton to a plain axis empty, and added two single arrow empties parented to the plain axis empty.
-- Create Folder Structure: Saves materials to selected folder directory
+- Create Folder Structure: Saves materials to selected folder directory.  Generates a .txt file inside the folder with the character settings, to be able to be used with the existing character import feature.
 - Character Preview: Press the "Preview" button to preview the current character.  Character by default is in one of the character creation poses, uncheck the "Preview Pose" to not use this pose and use an unposed character in the preview
 - Existing Character - Import Settings: Import an existing character created with this plugin - opens up a text editor window to paste in settings.
 - Export Character JSON: Creates paths.json, skeleton.json, preset.json, creates folder structure, and saves material files to folders - for using with ZG SWTOR Tool Character Importer.
