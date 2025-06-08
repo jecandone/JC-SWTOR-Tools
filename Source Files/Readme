@@ -400,7 +400,7 @@ To update dye color values:
 
 2) Select all and copy (ie control-a, control-c) into a new file (control-v) and save this as "DyeColors.csv"
 
-3) Go through and deleted all the non-armor dye values, it's quite obvious to tell which ones are for armor and which ones are not.  Dye color values should start around #28 with the "Black/Black" dye color
+3) Go through and deleted all the non-armor dye values, it's quite obvious to tell which ones are for armor and which ones are not.  Dye color values should start around #28 with the "Black/Black" dye color.  Save this as a CSV file.  
 
 4) Open up the CSV file in excel (any spreadsheet editor of your choice will probably work), and sort the columns by the third column (ie the in-game name), and saved as a new "DyeColors.csv" file.
 
