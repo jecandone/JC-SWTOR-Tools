@@ -36,7 +36,9 @@ Allows the import of armor via the ModelID, MaterialID, ColorSchemeID values.  H
 
 ![image](https://github.com/user-attachments/assets/e41e89f7-5304-4376-bd28-47c89034f5e8)
 
-Search this value in the "node" section of the file reader (https://swtor.jedipedia.net/reader), and click on the node that pops up.  
+
+Search this value in the "node" section of the file reader (https://swtor.jedipedia.net/reader), and click on the node that pops up. 
+
 
 <img width="982" height="749" alt="image" src="https://github.com/user-attachments/assets/9d1986d1-4dbe-4921-bcfe-46ecf4eea667" />
 
