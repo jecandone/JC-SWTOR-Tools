@@ -6,11 +6,11 @@ Tools built for Blender 3.6 (and tested in Blender 3.6.7) to be able to do vario
 - Character Creation
 - NPC Import
 
-This plugin uses information on armor and character creation properties that is stored in the plugin directory from game update from update 7.5.1 (Oct. 1, 2024).  Character selection properties added after this will not appear, and neither will armor that have been added after this.  However, armor pieces from future updates can still be added via the "Armor Import (Non-FQN)", as long as the extracted assets are up to date. 
+This plugin uses information on armor and character creation properties that is stored in the plugin directory from game update from update 7.9.1a (Aug. 4, 2026).  Character selection properties added after this will not appear, and neither will armor that have been added after this.  However, armor pieces from future updates can still be added via the "Armor Import (Manual)" section, as long as the extracted assets are up to date. 
 
 **<h2>Prerequisites/Enabling the Plugin</h2>**
 
-This plugin makes use of the "ZeroGravitas SWTOR Tools" for importing objects and material processing.  This in turn requires the use of the .gr2 importer.  Both of these can be found at: https://github.com/SWTOR-Slicers/ZG-SWTOR-Tools/releases
+This plugin makes use of the "ZeroGravitas SWTOR Tools" for importing objects and material processing.  This in turn requires the use of the .gr2 importer.  Both of these can be found at: https://github.com/SWTOR-Slicers/ZG-SWTOR-Tools/releases.
 
 Latest version of the JC SWTOR Tools (v1.2) plugin tested successfully with v2.0.13 of ZG Tools and v4.2.1 of GR2 Importer (found with the 2.0.13 version of ZG Tools).
 
@@ -18,17 +18,21 @@ When installing, please delete old versions of the plugin.
 
 There are two different versions of the plugin in the releases pages:
 
-7.5.1 Version - This contains pre-modernization character data (data up to game version 7.5.1), and up to date (through game version 7.9.1a) armor data.  This version of the plugin has two folder directories that need to be set in the addon preferences - "
+7.5.1 Version - This contains pre-modernization character data (data up to game version 7.5.1), and up to date (through game version 7.9.1a) armor data.  This version of the plugin has two folder directories that need to be set in the addon preferences.  "Current/Post-Modernization Import Directory" needs to point to the resource folder of your most up to date asset extraction resource folder.  "Pre-Modernization Import Directory" needs to point to your pre-modernization asset extraction resource folder.  
 
-7.9.1a Version - This contains post-modernization character data (data up to game version 7.9.1a) and armor data up through that same game version.  
+7.9.1a Version - This contains post-modernization character data (data up to game version 7.9.1a) and armor data up through that same game version.  Set "Import Directory" to the resource folder of your SWTOR Asset Extraction.    
 
-When enabling the plugin through Blender, make sure to point the input directory to the "resources" folder of your extracted SWTOR assets.  
+If you're unsure of which one to use, or don't have a pre-modernization asset extraction, use the 7.9.1a version.
 
 **<h2>Sections of the Plugin<h2>**
 
-**<h3>Armor Import (Non-FQN)</h3>**
+**<h3>Armor Import</h3>**
 
-Allows the import of armor via the ModelID, MaterialID, ColorSchemeID values.  To find this, search for any armor on https://swtor.jedipedia.net/en, for example "Havoc Squad Greaves".  Take a look under name under the appearance section, "ipp.mtx.season7.havoc_squad.legs".
+Allows for armor import by looking up either in-game (English/French/German) name values or by FQN values (if set in "Global Settings").  Note that many armor values have been translated from their FQN name to their in game name, but not all.  If in searching for an armor by it's in-game name, and it does not appear, search for it by its FQN name and it most likely will be in there, unless it has been added after the last time the armor source files were updated.  Some versions of armor have multiple versions.  For example, some crafting armors have a imperial/republic versions.  Sometimes you need to look up the FQN name of to be able to get the search result in the plugin to find it.  
+
+**<h3>Armor Import (Manual)</h3>**
+
+Allows the import of armor via the ModelID, MaterialID, ColorSchemeID values.  Helpful to be able to extract armor that has been added after the most recent version of the plugin has been released.  To find this, search for any armor on https://swtor.jedipedia.net/en, for example "Havoc Squad Greaves".  Take a look under name under the appearance section, "ipp.mtx.season7.havoc_squad.legs".
 
 ![image](https://github.com/user-attachments/assets/e41e89f7-5304-4376-bd28-47c89034f5e8)
 
@@ -45,10 +49,6 @@ Repeat this for any other armor pieces or slots to import, or leave them blank, 
 ![image](https://github.com/user-attachments/assets/6d5c4c72-77b0-433f-9029-e432104c4200)
 
 This can be helpful if the armor source files have not been updated for future game armors.  Instead of doing the whole process manually, you can still use the Model ID, Material ID, and Color Scheme ID to import armor that is not in armor source files, as long as it is in the extracted assets directory. 
-
-**<h3>Armor Import (FQN)</h3>**
-
-Allows for armor import by looking up either in-game (English) name values or by FQN values (if set in "Global Settings").  Note that many armor values have been translated from their FQN name to their in game name, but not all.  If in searching for an armor by it's in-game name, search for it by its FQN name and it most likely will be in there, unless it has been added after the last time the armor source files were updated.
 
 **<h3>Save Texture Files</h3>**
 
