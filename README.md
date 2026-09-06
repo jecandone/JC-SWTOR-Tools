@@ -38,7 +38,8 @@ Allows the import of armor via the ModelID, MaterialID, ColorSchemeID values.  H
 
 Search this value in the "node" section of the file reader (https://swtor.jedipedia.net/reader), and click on the node that pops up.  
 
-![image](https://github.com/user-attachments/assets/7aae6d6b-5cd9-49d6-8135-028b378c0902)
+<img width="982" height="749" alt="image" src="https://github.com/user-attachments/assets/9d1986d1-4dbe-4921-bcfe-46ecf4eea667" />
+
 
 Copy the value from "appAppearanceSlotModelID" to the appropriate "ModelID" part of the blender plugin, "appAppearanceSlotMaterialIndex" to the Material ID field, and "ippColorScheme" to the Color Scheme ID field.  Select the body type of the armor that you want to import from the dropdown.
 
