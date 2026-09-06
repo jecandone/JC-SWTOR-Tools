@@ -10,9 +10,17 @@ This plugin uses information on armor and character creation properties that is 
 
 **<h2>Prerequisites/Enabling the Plugin</h2>**
 
-This plugin makes use of the "ZeroGravitas SWTOR Tools" (https://github.com/SWTOR-Slicers/ZG-SWTOR-Tools) for importing objects and material processing.  This in turn requires the use of the .gr2 importer (https://github.com/SWTOR-Slicers/Granny2-Plug-In-Blender-2.8x/releases/tag/4.0.6).
+This plugin makes use of the "ZeroGravitas SWTOR Tools" for importing objects and material processing.  This in turn requires the use of the .gr2 importer.  Both of these can be found at: https://github.com/SWTOR-Slicers/ZG-SWTOR-Tools/releases
 
-Built and tested this plugin with the "2024-09" version of the ZG SWTOR Tools and the v4.0.4 of the .gr2 importer.
+Latest version of the JC SWTOR Tools (v1.2) plugin tested successfully with v2.0.13 of ZG Tools and v4.2.1 of GR2 Importer (found with the 2.0.13 version of ZG Tools).
+
+When installing, please delete old versions of the plugin.  
+
+There are two different versions of the plugin in the releases pages:
+
+7.5.1 Version - This contains pre-modernization character data (data up to game version 7.5.1), and up to date (through game version 7.9.1a) armor data.  This version of the plugin has two folder directories that need to be set in the addon preferences - "
+
+7.9.1a Version - This contains post-modernization character data (data up to game version 7.9.1a) and armor data up through that same game version.  
 
 When enabling the plugin through Blender, make sure to point the input directory to the "resources" folder of your extracted SWTOR assets.  
 
