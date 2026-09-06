@@ -49,7 +49,7 @@ Copy the value from "appAppearanceSlotModelID" to the appropriate "ModelID" part
 
 Repeat this for any other armor pieces or slots to import, or leave them blank, and click "Import Armor" and the armor will import:
 
-![image](https://github.com/user-attachments/assets/6d5c4c72-77b0-433f-9029-e432104c4200)
+<img width="1220" height="918" alt="image" src="https://github.com/user-attachments/assets/9feee346-340e-4b99-bb42-96e7f2ee52de" />
 
 This can be helpful if the armor source files have not been updated for future game armors.  Instead of doing the whole process manually, you can still use the Model ID, Material ID, and Color Scheme ID to import armor that is not in armor source files, as long as it is in the extracted assets directory. 
 
